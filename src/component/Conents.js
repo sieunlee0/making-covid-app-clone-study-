@@ -106,6 +106,7 @@ export default function Conents() {
         fetchEvent();
     }, []);
 
+    
     return (
         <section>
             <h2>국내 코로나 현황</h2>
