@@ -1,14 +1,19 @@
 import { useState, useEffect } from "react";
-import { Bar } from "react-chartjs-2";
+import { Bar, Line } from "react-chartjs-2";
 import axios from 'axios' 
 
 export default function Conents() {
 
-    const  [confirmedData, setConfirmedData] = useState({});
+    const [confirmedData, setConfirmedData] = useState({});
+    const [quarantinedData, setQuarantinedData] = useState({});
     
     const options={ 
         title:{ display: true, text: "누적 확진자 추이", fontSize: 16 },
         legend:{display: true, positon: "bottom"},
+    };
+    const options2={
+        title:{ display: true, text: "월별 격리자 현황", fontSize: 16 },
+        legend:{display: true, positon: "bottom"}
     };
 
     useEffect(()=> {
@@ -65,6 +70,19 @@ export default function Conents() {
                 ]
             });
 
+            setQuarantinedData({
+                labels,
+                datasets: [
+                    {
+                        label: "월별 격리자 현황",
+                        borderColor: "salmon",
+                        fill: "flase",
+                        data: arr.map(a=>a.active)
+                    },
+                ]
+            });
+
+
         }
 
         fetchEvent();
@@ -77,6 +95,7 @@ export default function Conents() {
             <div className="contents">
                 <div>
                     <Bar data={ confirmedData } options={options} />
+                    <Line data={quarantinedData} options={options2} />
                 </div>
             </div>
         </section>
