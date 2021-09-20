@@ -37,7 +37,7 @@ export default function Conents() {
                     })
                 }
 
-                if(findItem && findItem.data < items.data){
+                if(findItem && findItem.data < date){
                     findItem.year = year;
                     findItem.monthr = month;
                     findItem.date = date;
@@ -57,7 +57,7 @@ export default function Conents() {
                 labels,
                 datasets: [
                     {
-                        labl: "국내 누적 확진자",
+                        label: "국내 누적 확진자",
                         backgroundColor: "salmon",
                         fill: "true",
                         data: arr.map(a=>a.Confirmed)
