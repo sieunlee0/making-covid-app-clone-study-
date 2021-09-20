@@ -1,4 +1,27 @@
 .App {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
+.header {
+  padding: 1rem 2rem;
+  background-color: #3b5998;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h1 {
+  color: #fff;
+}
+
+.header select {
+  width: 140px;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+}
+
+section {
+  padding: 1rem;
+}
