@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
 import { Bar, Doughnut, Line} from "react-chartjs-2";
 import axios from 'axios' 
-import { getByDisplayValue } from "@testing-library/react";
 
 export default function Conents() {
+
+    const  [confirmedData, setConfirmedData] = useState({});
 
     useEffect(()=> {
 
@@ -22,7 +23,7 @@ export default function Conents() {
                     <Bar data={ confirmedData } options={ 
                         {title:{ display: true, text: "누적 확진자 추이", fontSize: 16 }},
                         {legend:{display: true, positon: "bottom"}}
-                    }
+                    } />
                 </div>
             </div>
         </section>
