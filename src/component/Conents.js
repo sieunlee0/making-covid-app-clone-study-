@@ -4,7 +4,7 @@ import axios from 'axios'
 
 export default function Conents() {
 
-    const  [confirmedData, setConfirmedData] = useState();
+    const  [confirmedData, setConfirmedData] = useState({});
     
     const options={ 
         title:{ display: true, text: "누적 확진자 추이", fontSize: 16 },
