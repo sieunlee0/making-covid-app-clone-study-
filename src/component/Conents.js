@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
-import { Bar, Line } from "react-chartjs-2";
+import { Bar, Line, Doughnut } from "react-chartjs-2";
 import axios from 'axios' 
 
 export default function Conents() {
 
     const [confirmedData, setConfirmedData] = useState({});
     const [quarantinedData, setQuarantinedData] = useState({});
+    const [comparedData, setComparedData] = useState({});
     
     const options={ 
         title:{ display: true, text: "누적 확진자 추이", fontSize: 16 },
@@ -15,7 +16,12 @@ export default function Conents() {
         title:{ display: true, text: "월별 격리자 현황", fontSize: 16 },
         legend:{display: true, positon: "bottom"}
     };
+    const options3={
+        title:{ display: true, text: `누적 확진/해제/사망 (${new Date().getMonth()+1})월`, fontSize: 16 },
+        legend:{display: true, positon: "bottom"}
+    };
 
+    
     useEffect(()=> {
 
         const fetchEvent = async ()=>{
@@ -82,20 +88,32 @@ export default function Conents() {
                 ]
             });
 
-
+            const lastMonth = arr[arr.length-1];
+            setComparedData({
+                labels: ["누적 확진자", "격리 해제", "사망자"],
+                datasets: [
+                    {
+                        label: "누적 확진/해제/사망 비율",
+                        backgroundColor: ["#ff3d7", "#059bff", "#ffc233"],
+                        borderColor: ["#ff3d7", "#059bff", "#ffc233"],
+                        fill: "flase",
+                        data: [lastMonth.confirmed, lastMonth.recovered, lastMonth.deaths],
+                    },
+                ]
+            });
         }
 
         fetchEvent();
-
-    });
+    }, []);
 
     return (
         <section>
             <h2>국내 코로나 현황</h2>
             <div className="contents">
                 <div>
-                    <Bar data={ confirmedData } options={options} />
-                    <Line data={quarantinedData} options={options2} />
+                    <Bar data={ confirmedData } options={ options } />
+                    <Line data={ quarantinedData } options={ options2 } />
+                    <Doughnut data={ comparedData } option={ options3 } />
                 </div>
             </div>
         </section>
