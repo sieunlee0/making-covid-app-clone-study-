@@ -5,8 +5,8 @@ import Conentst from './component/Conents'
 function App() {
   return (
     <div className="App">
-      <h2>국내 코로나 현황</h2>
       <Header />
+      <h2>국내 코로나 현황</h2>
       <Conentst />
 
     </div>
