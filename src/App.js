@@ -1,15 +1,17 @@
 import './App.css';
+import Header from './component/Header'
 
 function App() {
   return (
     <div className="App">
-      <header className="header">
-        <h1>COVID-19 DATA</h1>
-        <select>
-          <option>국내</option>
-          <option>세계</option>
-        </select>
-      </header>
+      <Header />
+
+      <section>
+        <h2>국내 코로나 현황</h2>
+        <div className="contents">
+          
+        </div>
+      </section>
     </div>
   );
 }
