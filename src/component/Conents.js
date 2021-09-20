@@ -25,7 +25,21 @@ export default function Conents() {
 
         const fetchEvent = async ()=>{
             const res = await axios.get("https://api.covid19api.com/total/dayone/country/kr");
+            makeData(res.data);
         }
+
+        const makeData = (items)=> {
+            const arr = items.reduce((acc, cur)=>{
+                const curruntDate = new Date(cur.Date);
+                const year = curruntDate.getFullYear();
+                const month = curruntDate.getMonth();
+                const date = curruntDate.getDate();
+
+                console.log(year, month, date);
+                return acc;
+            }, []);
+        }
+
         fetchEvent();
 
     });
