@@ -71,7 +71,7 @@ export default function Conents() {
                         label: "국내 누적 확진자",
                         backgroundColor: "salmon",
                         fill: "true",
-                        data: arr.map(a=>a.Confirmed)
+                        data: arr.map(a=>a.confirmed)
                     },
                 ]
             });
