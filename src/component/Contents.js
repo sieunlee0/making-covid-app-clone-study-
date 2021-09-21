@@ -110,11 +110,9 @@ export default function Conents() {
     return (
         <section>
             <div className="contents">
-                <div>
                     <Bar data={ confirmedData } options={ options } />
                     <Line data={ quarantinedData } options={ options2 } />
                     <Doughnut data={ comparedData } option={ options3 } />
-                </div>
             </div>
         </section>
     );
