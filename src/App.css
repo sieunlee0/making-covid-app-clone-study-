@@ -29,6 +29,5 @@ section {
 
 .contents {
   display: grid;
-  grid-template-columns: 2fr;
-  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
 }
