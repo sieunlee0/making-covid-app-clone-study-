@@ -97,14 +97,14 @@ export default function Conents() {
     return (
         <section>
             <div className="contents">
-                    <Bar data={ confirmedData } 
-                        options={{
-                            title:{ display: true, text: "누적 확진자 추이", fontSize: 16 },
-                            legend:{display: true, position: "bottom"}
-                        }}
-                     />
-                    <Line data={ quarantinedData } options={ options2 } />
-                    <Doughnut data={ comparedData } option={ options3 } />
+                <Bar data={ confirmedData } 
+                    options={{
+                        title:{ display: true, text: "누적 확진자 추이", fontSize: 16 },
+                        legend:{display: true, position: "bottom"}
+                    }}
+                 />
+                <Line data={ quarantinedData } options={ options2 } />
+                <Doughnut data={ comparedData } option={ options3 } />
             </div>
         </section>
     );
