@@ -41,7 +41,7 @@ export default function Conents() {
                 if(!findItem){
                     acc.push({
                         year, month, date, confirmed, active, deaths, recovered
-                    })
+                    });
                 }
 
                 if(findItem && findItem.data < date){
