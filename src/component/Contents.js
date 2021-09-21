@@ -10,15 +10,15 @@ export default function Conents() {
     
     const options={ 
         title:{ display: true, text: "누적 확진자 추이", fontSize: 16 },
-        legend:{display: true, positon: "bottom"},
+        legend:{display: true, position: "bottom"},
     };
     const options2={
         title:{ display: true, text: "월별 격리자 현황", fontSize: 16 },
-        legend:{display: true, positon: "bottom"}
+        legend:{display: true, position: "bottom"}
     };
     const options3={
-        title:{ display: true, text: `누적 확진/해제/사망 (${new Date().getMonth()+1})월`, fontSize: 16 },
-        legend:{display: true, positon: "bottom"}
+        title:{ display: true, text: `누적 확진/해제/사망 (${new Date().getMonth()+1}월)`, fontSize: 16 },
+        legend:{display: true, position: "bottom"}
     };
 
     
