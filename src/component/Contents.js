@@ -73,7 +73,7 @@ export default function Conents() {
                 datasets: [{
                     label: "월별 격리자 현황",
                     borderColor: "salmon",
-                    fill: "flase",
+                    fill: "false",
                     data: arr.map(a=>a.active),
                 }]
             });
@@ -85,7 +85,7 @@ export default function Conents() {
                     label: "누적 확진/해제/사망 비율",
                     backgroundColor: ["#ff3d7", "#059bff", "#ffc233"],
                     borderColor: ["#ff3d7", "#059bff", "#ffc233"],
-                    fill: "flase",
+                    fill: "false",
                     data: [lastMonth.confirmed, lastMonth.recovered, lastMonth.deaths],
                 }]
             });
@@ -93,7 +93,6 @@ export default function Conents() {
 
         fetchEvent();
     }, []);
-
 
     return (
         <section>
