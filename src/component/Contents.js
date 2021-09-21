@@ -51,7 +51,7 @@ export default function Conents() {
                     findItem.confirmed = confirmed;
                     findItem.active = active;
                     findItem.deaths = deaths;
-                    findItem.recovered = recovered
+                    findItem.recovered = recovered;
                 }
 
     
