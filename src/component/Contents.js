@@ -48,7 +48,6 @@ export default function Conents() {
                     findItem.year = year;
                     findItem.monthr = month;
                     findItem.date = date;
-                    findItem.date = date;
                     findItem.confirmed = confirmed;
                     findItem.active = active;
                     findItem.deaths = deaths;
