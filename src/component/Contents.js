@@ -53,7 +53,6 @@ export default function Conents() {
                     findItem.deaths = deaths;
                     findItem.recovered = recovered;
                 }
-
     
                 return acc;
             }, []);
@@ -61,40 +60,34 @@ export default function Conents() {
             const labels = arr.map(a=>`${a.month+1}월`)
             setConfirmedData({
                 labels,
-                datasets: [
-                    {
-                        label: "국내 누적 확진자",
-                        backgroundColor: "salmon",
-                        fill: "true",
-                        data: arr.map(a=>a.confirmed)
-                    },
-                ]
+                datasets: [{
+                    label: "국내 누적 확진자",
+                    backgroundColor: "salmon",
+                    fill: "true",
+                    data: arr.map(a=>a.confirmed),
+                }]
             });
 
             setQuarantinedData({
                 labels,
-                datasets: [
-                    {
-                        label: "월별 격리자 현황",
-                        borderColor: "salmon",
-                        fill: "flase",
-                        data: arr.map(a=>a.active)
-                    },
-                ]
+                datasets: [{
+                    label: "월별 격리자 현황",
+                    borderColor: "salmon",
+                    fill: "flase",
+                    data: arr.map(a=>a.active),
+                }]
             });
 
             const lastMonth = arr[arr.length-1];
             setComparedData({
                 labels: ["누적 확진자", "격리 해제", "사망자"],
-                datasets: [
-                    {
-                        label: "누적 확진/해제/사망 비율",
-                        backgroundColor: ["#ff3d7", "#059bff", "#ffc233"],
-                        borderColor: ["#ff3d7", "#059bff", "#ffc233"],
-                        fill: "flase",
-                        data: [lastMonth.confirmed, lastMonth.recovered, lastMonth.deaths],
-                    },
-                ]
+                datasets: [{
+                    label: "누적 확진/해제/사망 비율",
+                    backgroundColor: ["#ff3d7", "#059bff", "#ffc233"],
+                    borderColor: ["#ff3d7", "#059bff", "#ffc233"],
+                    fill: "flase",
+                    data: [lastMonth.confirmed, lastMonth.recovered, lastMonth.deaths],
+                }]
             });
         }
 
