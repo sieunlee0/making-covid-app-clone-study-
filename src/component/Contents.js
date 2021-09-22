@@ -44,7 +44,7 @@ export default function Conents() {
                     });
                 }
 
-                if(findItem && findItem.data < date){
+                 {
                     findItem.year = year;
                     findItem.monthr = month;
                     findItem.date = date;
@@ -57,7 +57,7 @@ export default function Conents() {
                 return acc;
             }, []);
 
-            const labels = arr.map(a=>`${a.month+1}월`)
+            const labels = arr.map(a=>`${a.month+1}월`);
             setConfirmedData({
                 labels,
                 datasets: [{
