@@ -17,11 +17,14 @@ chartjs-2는 chart.js에 속해 있다.
 
 데이터를 비동기 통신으로 받아올 수 있도록 코드로 처리하는 방법 중에 하나다.
 비슷한 기능으로는 fetch가 있으며 axios와 fetch모두 API다.
+fetch와 비교했을 때 axios는 따로 설치를 해야하는 불편함이 있지만, 기능이 좀 더 많고 코드가 더 간소화 될 수 있다는 장점이 있다.
+react에서 많이 쓰인다. 
 
 axios는 async와 await과 함께 쓰이는 경우가 많다.
 async는 함수나 코드를 비동기화된 것들은 Promise를 반환한다.
 await은 Promise를 반환하는 Promise기반 함수 앞에 쓰이며, async함수 내에서만 쓰일 수 있다.
-콜백함수 역할을 해주는 것으로 보인다.*/
+콜백함수 역할을 해주는 것으로 보인다.
+async와 await을 쓰면 받아온 데이터를 "then()"으로 출력할 필요가 없어진다.*/
 
 
 export default function Conents() {
