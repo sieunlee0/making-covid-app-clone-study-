@@ -3,7 +3,13 @@ import { Bar, Line, Doughnut } from "react-chartjs-2";
 // chartjs-2는 chart.js에 속해 있다. 
 /* 즉,chartjs-2는 wrapper로써 chart.js를 wrapping하고 있기 때문에 chart.js에 기반한 기능이다.
 따라서 chartjs-2를 통해 chart.js의 기능을 쓸 수 있게 되는 듯 하다*/
+/* chart의 type(종류)로는 line, bar, horizontalBar, radar, doughnut, polarArea, bubble, pie,scatter, area가 있다. 
+여기서 주목할 점은 위의 import 부분에서는 chart의 종류들이 대분자로 시작하고 있다는 것이다.
+대문자로 쓴 이유는 'react-chartjs-2'라는 모듈에 bar, line, doughnut에 대한 정보가 담겨 있고,
+그 정보들을 컴포넌트로써 가져오고 있다는 것을 의미한다.*/
 import axios from 'axios' ;
+// 
+
 
 export default function Conents() {
 
