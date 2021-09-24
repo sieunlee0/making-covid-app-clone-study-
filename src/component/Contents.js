@@ -1,14 +1,27 @@
 import { useState, useEffect } from "react";
 import { Bar, Line, Doughnut } from "react-chartjs-2";
-// chartjs-2는 chart.js에 속해 있다. 
-/* 즉,chartjs-2는 wrapper로써 chart.js를 wrapping하고 있기 때문에 chart.js에 기반한 기능이다.
-따라서 chartjs-2를 통해 chart.js의 기능을 쓸 수 있게 되는 듯 하다*/
-/* chart의 type(종류)로는 line, bar, horizontalBar, radar, doughnut, polarArea, bubble, pie,scatter, area가 있다. 
+import axios from 'axios' ;
+
+/*chartjs에 대한 공부 내용
+chartjs-2는 chart.js에 속해 있다. 
+
+즉,chartjs-2는 wrapper로써 chart.js를 wrapping하고 있기 때문에 chart.js에 기반한 기능이다.
+따라서 chartjs-2를 통해 chart.js의 기능을 쓸 수 있게 되는 듯 하다
+
+ chart의 type(종류)로는 line, bar, horizontalBar, radar, doughnut, polarArea, bubble, pie,scatter, area가 있다. 
 여기서 주목할 점은 위의 import 부분에서는 chart의 종류들이 대분자로 시작하고 있다는 것이다.
 대문자로 쓴 이유는 'react-chartjs-2'라는 모듈에 bar, line, doughnut에 대한 정보가 담겨 있고,
 그 정보들을 컴포넌트로써 가져오고 있다는 것을 의미한다.*/
-import axios from 'axios' ;
-// 
+
+/*axios에 대한 공부 내용
+
+데이터를 비동기 통신으로 받아올 수 있도록 코드로 처리하는 방법 중에 하나다.
+비슷한 기능으로는 fetch가 있으며 axios와 fetch모두 API다.
+
+axios는 async와 await과 함께 쓰이는 경우가 많다.
+async는 함수나 코드를 비동기화된 것들은 Promise를 반환한다.
+await은 Promise를 반환하는 Promise기반 함수 앞에 쓰이며, async함수 내에서만 쓰일 수 있다.
+콜백함수 역할을 해주는 것으로 보인다.*/
 
 
 export default function Conents() {
