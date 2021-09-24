@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { Bar, Line, Doughnut } from "react-chartjs-2";
 // chartjs-2는 chart.js에 속해 있다. 
-// 즉,chartjs-2는 wrapper로써 chart.js를 wrapping하고 있다. 
+/* 즉,chartjs-2는 wrapper로써 chart.js를 wrapping하고 있기 때문에 chart.js에 기반한 기능이다.
+따라서 chartjs-2를 통해 chart.js의 기능을 쓸 수 있게 되는 듯 하다*/
 import axios from 'axios' ;
 
 export default function Conents() {
