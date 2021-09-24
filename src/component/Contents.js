@@ -57,7 +57,7 @@ export default function Conents() {
                 return acc;
             }, []);
 
-            const labels = arr.map(a=>`${a.month+1}월`);
+            const labels = arr.map(a=>(`${a.month+1}월`));
             setConfirmedData({
                 labels,
                 datasets: [{
