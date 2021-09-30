@@ -69,7 +69,7 @@ export default function Conents() {
                     });
                 }
 
-                 {
+                if(findItem && findItem.date < date) {
                     findItem.year = year;
                     findItem.monthr = month;
                     findItem.date = date;
