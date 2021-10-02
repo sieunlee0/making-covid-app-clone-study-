@@ -54,7 +54,7 @@ export default function Conents() {
 
         const makeData = (items)=> {//makeData라는 이름으로 함수를 정의했다.
             //res.data를 itmems라는 이름으로 변경하여 가져오고 있다 
-            const arr = items.reduce((acc, cur)=>{
+            const arr = items.reduce((acc, cur)=>{//acc는 누적값, cur은 현재처리 되는 값으로 cur이 처리가 완료되면 acc로 넘어간다
                 const curruntDate = new Date(cur.Date);
                 const year = curruntDate.getFullYear();
                 const month = curruntDate.getMonth();
