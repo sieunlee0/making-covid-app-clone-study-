@@ -48,9 +48,10 @@ export default function Conents() {
         const fetchEvent = async ()=>{
             const res = await axios.get("https://api.covid19api.com/total/dayone/country/kr");
             makeData(res.data);
+            // makeData라는 이름의 함수를 미리 호출했다. 호출한 함수는 아래의 코드들이다
         }
 
-        const makeData = (items)=> {
+        const makeData = (items)=> {//makeData라는 이름으로 함수를 정의했다.
             const arr = items.reduce((acc, cur)=>{
                 const curruntDate = new Date(cur.Date);
                 const year = curruntDate.getFullYear();
