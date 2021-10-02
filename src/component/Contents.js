@@ -33,6 +33,10 @@ export default function Conents() {
     const [quarantinedData, setQuarantinedData] = useState({});
     const [comparedData, setComparedData] = useState({});
 
+    const options1={
+        title:{ display: true, text: "월별 격리자 현황", fontSize: 16 },
+        legend:{display: true, position: "bottom"}
+    };
     const options2={
         title:{ display: true, text: "월별 격리자 현황", fontSize: 16 },
         legend:{display: true, position: "bottom"}
@@ -127,10 +131,7 @@ export default function Conents() {
         <section>
             <div className="contents">
                 <Bar data={ confirmedData } 
-                    options={{
-                        title:{ display: true, text: "누적 확진자 추이", fontSize: 16 },
-                        legend:{display: true, position: "bottom"}
-                    }}
+                    options={ options1 }
                  />
                 <Line data={ quarantinedData } options={ options2 } />
                 <Doughnut data={ comparedData } option={ options3 } />
