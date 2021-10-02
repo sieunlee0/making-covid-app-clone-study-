@@ -34,7 +34,7 @@ export default function Conents() {
     const [comparedData, setComparedData] = useState({});
 
     const options1={
-        title:{ display: true, text: "월별 격리자 현황", fontSize: 16 },
+        title:{ display: true, text: "누적 확진자 추이", fontSize: 16 },
         legend:{display: true, position: "bottom"}
     };
     const options2={
