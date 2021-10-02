@@ -53,7 +53,7 @@ export default function Conents() {
         }
 
         const makeData = (items)=> {//makeData라는 이름으로 함수를 정의했다.
-            //itmems라는 이름으로 api에서 받
+            //res.data를 itmems라는 이름으로 변경하여 가져오고 있다 
             const arr = items.reduce((acc, cur)=>{
                 const curruntDate = new Date(cur.Date);
                 const year = curruntDate.getFullYear();
