@@ -135,7 +135,5 @@ export default function Conents() {
                 <Doughnut data={ comparedData } option={ options3 } />
             </div>
         </section>
-    );
-
-    
+    );    
 }
