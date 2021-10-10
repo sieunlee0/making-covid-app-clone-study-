@@ -56,6 +56,7 @@ export default function Conents() {
             //res.data로 api의 data를 받아오고 있다
         }
 
+
         const makeData = (items)=> {//makeData라는 이름으로 함수를 정의했다.
             //res.data를 itmems라는 이름으로 변경하여 가져오고 있다 
             const arr = items.reduce((acc, cur)=>{
@@ -90,6 +91,7 @@ export default function Conents() {
                 return acc;
             }, []);
 
+            
             const labels = arr.map(a=>(`${a.month+1}월`));
             setConfirmedData({
                 labels,
@@ -127,7 +129,7 @@ export default function Conents() {
         fetchEvent();
     }, []);
 
-    
+
     return (
         <section>
             <div className="contents">
