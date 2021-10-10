@@ -2,7 +2,7 @@ import './src/App.css';
 import Header from './src/component/Header';
 import Contents from './src/component/Contents';
 
-function App() {
+export default function App() {
   return (
     <div className="App">
       <Header />
@@ -12,4 +12,3 @@ function App() {
   );
 }
 
-export default App;
