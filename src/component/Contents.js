@@ -129,6 +129,7 @@ export default function Conents() {
         fetchEvent();
     }, []);
 
+    
     return (
         <section>
             <div className="contents">
